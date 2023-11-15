@@ -69,6 +69,11 @@ function App() {
         <button onClick={handleCheapestFirstClick}>Goedkoopste eerst</button>
         <button onClick={handleBestForSportsClick}>Meest geschikt voor sport eerst</button>
       </span>
+
+            {getSoldTvs(inventory)}
+
+
+
         </>
     );
 }
