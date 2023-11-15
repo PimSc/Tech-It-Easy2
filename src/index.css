@@ -12,3 +12,7 @@ body {
   font-family: 'Zen Kaku Gothic New', Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
+
+.prizeTextSize {
+font-size: 30px;
+}
