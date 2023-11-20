@@ -5,9 +5,9 @@ import { boughttvs } from "./helpers/boughttvs.jsx";
 import { toSellTvNumber } from "./helpers/tosell.jsx";
 import showProductName from "./helpers/showProductName.jsx";
 import showProductPrice from "./helpers/showProductPrice.jsx";
-import showProductScreensizes from "./helpers/showProductScreensizes.jsx";
+import showProductScreenSizes from "./helpers/showProductScreenSizes.jsx";
 import { bestSellingTv } from "./constants/inventory.js";
-import { inventory } from "./constants/inventory.js";
+
 
 function App() {
     const handleMostSoldClick = () => {
@@ -54,13 +54,15 @@ function App() {
                     <img className={"tvImg"} src={bestSellingTv.sourceImg} alt=""/>
                 </div>
 
-                <div className={"greyBoxSpecs"}>
+                <ul className={"greyBoxSpecs"}>
                     <p>{showProductName(bestSellingTv)}</p>
                     <p className={"prizeTextSize"}>{showProductPrice(bestSellingTv)}</p>
-                    <p>{showProductScreensizes(bestSellingTv)}</p>
+                    <p>{showProductScreenSizes(bestSellingTv)}</p>
                     <p><img className="miniIcon" src="src/assets/check.png" alt=""/> wifi <img className="miniIcon" src="src/assets/minus.png" alt=""/> speach <img className="miniIcon" src="src/assets/check.png" alt=""/> hdr <img className="miniIcon" src="src/assets/check.png" alt=""/> bluetooth <img className="miniIcon" src="src/assets/minus.png" alt=""/> ambilight</p>
-                </div>
+                </ul>
             </div>
+
+            
 
             <h2>Alle tvs</h2>
 
@@ -70,7 +72,11 @@ function App() {
         <button onClick={handleBestForSportsClick}>Meest geschikt voor sport eerst</button>
       </span>
 
-            {getSoldTvs(inventory)}
+
+
+
+
+
 
 
 

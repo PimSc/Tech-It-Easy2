@@ -1,4 +1,4 @@
-function showProductScreensizes(product) {
+function showProductScreenSizes(product) {
     let result = "";
 
     for (let i = 0; i < product.availableSizes.length; i++) {
@@ -15,4 +15,4 @@ function showProductScreensizes(product) {
     return result;
 }
 
-export default showProductScreensizes;
+export default showProductScreenSizes;

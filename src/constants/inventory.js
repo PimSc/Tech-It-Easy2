@@ -329,3 +329,42 @@ export let inventory = [
 ];
 
 
+// tv types
+const tvTypes = inventory.map(tv => tv.type);
+console.log(tvTypes);
+
+
+// uitverkochte tv`s`
+const soldOutTVs = inventory.filter(tv => tv.sold === tv.originalStock);
+console.log(soldOutTVs);
+
+// alles over 1 tv
+const specificTV = inventory.find(tv => tv.type === 'NH3216SMART');
+console.log(specificTV);
+
+
+// merk- en tv-namen geschikt voor sport (100Hz of hoger)
+const tvSuitabilityList = inventory.map(tv => {
+    const suitableForSports = tv.refreshRate >= 100;
+    return {
+        name: `${tv.brand} ${tv.name}`,
+        suitable: suitableForSports,
+    };
+});
+
+// Verzamel informatie van tv's met schermgroottes van 65 inch en groter
+console.log(tvSuitabilityList);
+const largeScreenTVs = inventory.filter(tv => tv.availableSizes.some(size => size >= 65))
+console.log(largeScreenTVs);
+
+
+// Verzamel informatie van tv's met Ambilight
+const ambilightTVs = inventory.filter(tv => tv.options.some(option => option.name === 'ambiLight' && option.applicable));
+console.log(ambilightTVs);
+
+// -----
+
+// tv brands
+const tvBrands = inventory.map(tv => tv.brand);
+console.log(tvBrands);
+
